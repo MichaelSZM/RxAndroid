@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button async,sync,psubject,search,singlemap;
+    Button async,sync,psubject,search,singlemap,flatmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         psubject= (Button) findViewById(R.id.psubject);
         search= (Button) findViewById(R.id.search);
         singlemap= (Button) findViewById(R.id.singlemap);
+        flatmap= (Button) findViewById(R.id.flatmap);
         async.setOnClickListener(this);
         sync.setOnClickListener(this);
         psubject.setOnClickListener(this);
         search.setOnClickListener(this);
         singlemap.setOnClickListener(this);
+        flatmap.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.singlemap:
                 startActivity(new Intent(this,SingleAndMapActivity.class));
+                break;
+            case R.id.flatmap:
+                startActivity(new Intent(this,FlatMapTryActivity.class));
                 break;
             default:
                 break;
